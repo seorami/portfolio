@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>SEO RA MI | PORTFOLIO</title>
+  <!-- 구글웹폰트 -->
+  <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+  <!-- 폰트어썸: 아이콘 라이브러리 -->
+  <script src="https://kit.fontawesome.com/f3badcffe1.js" crossorigin="anonymous"></script>
+  <!-- 진입 애니메이션 -->
+  <script src="https://unpkg.com/enter-view"></script>
+  <!-- 애니메이션 키프레임 -->
+  <link rel="stylesheet" href="ani.css">
+  <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+  <!-- 갤러리 팬시박스 -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+  <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+  <!-- 이 예제에서는 필요한 js, css 를 링크걸어 사용 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/css/swiper.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/js/swiper.min.js"></script>
+  <!-- css -->
+  <link rel="stylesheet" href="./css/style.css">
+  <!-- js -->
+  <link rel="stylesheet" href="./js/main.js">
+  <!-- jquery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+<body>
+  <header id="main_header">
+    <div class="container">
+      <h1><a a href="#">RAMI</a></h1>
+      <nav id="main_gnb">
+        <ul>
+          <li><a href="#main_banner">HOME</a></li>
+          <li><a href="#about">ABOUT</a></li>
+          <li><a href="#publishing">PORTFOLIO</a></li>
+          <li><a href="#contact">CONTACT</a></li>
+        </ul>
+      </nav>
+    </div> <!-- end container -->
+  </header>
+
+  <!-- menu scroll -->
+  <script>
+    $(function(){
+  var header = $('header'); //헤더를 변수에 넣기
+  var page = $('.page-start'); //색상이 변할 부분
+  var pageOffsetTop = page.offset().top; //색상 변할 부분의 top값 구하기
+  $(window).resize(function(){ //반응형을 대비하여 리사이즈시 top값을 다시 계산
+    pageOffsetTop = page.offset().top;
+  });
+  
+  $(window).on('scroll', function(){
+    if($(window).scrollTop() >= pageOffsetTop) { // 스크롤이 page보다 밑에 내려가면
+      header.addClass('down'); //클래스 추가
+    } else { // 스크롤 올릴 때
+      header.removeClass('down'); //클래스 제거
+    }
+  });
+});
+  </script>
+  <!-- scroll -->
+  <script>
+    $(function(){
+	// 페이지 스크롤 효과
+	$('#main_gnb a, #up a').on('click', function(){
+		// 이동한 내부 링크의 위치값(hash)
+		var target = $(this.hash);
+		console.log(target);
+		$('html, body').animate({
+			scrollTop: target.offset().top
+		});
+		return false; // 앵커태그 무효화
+	});
+
+});
+  </script>
+
+  <section id="main_banner">
+    <div class="container">
+      
+    </div> <!-- end container -->
+  </section>
+
+  <section id="about" class="page-start">
+    <div class="container">
+      <h2>About Me</h2>
+      <div class="profile">
+        <img src="./images/profile.png" alt="1">
+        <h4>서라미</h4>
+        <h5>Seo ra mi</h5>
+        <span class="ab_line"></span>
+        <ul>
+          <li>1996.06.13</li>
+          <li>서울시 강서구 가양동</li>
+        </ul>
+      </div>
+      <div class="career">
+        <h5>Career</h5>
+        <span class="ab_line"></span>
+        <ul>
+          <li>- 메타넷엠씨씨 QA (2018.08 - 2019.04)</li>
+        </ul>
+      </div>
+      <div class="license">
+        <h5>license</h5>
+        <span class="ab_line"></span>
+        <ul>
+          <li>- GTQ 1급 (2019.11)</li>
+          <li>- JLPT 3급 (2019.08)</li>
+          <li>- 평생교육사 2급 (2017.02)</li>
+        </ul>
+      </div>
+      <div class="education">
+        <h5>Education</h5>
+        <span class="ab_line"></span>
+        <ul>
+          <li>- 경복여자고등학교 졸업 (2015.02)</li>
+          <li>- 명지전문대학 졸업 (2017.02)</li>
+          <li>- 스마트웹 & UI/UX 퍼블리싱 전문가 양성과정 수료 (2019.08 - 2019.01)</li>
+        </ul>
+      </div>
+      <div class="skill">
+        <h5>Skill</h5>
+        <span class="ab_line"></span>
+        <ul>
+          <li>- Photoshop</li>
+          <div class="graph"></div>
+          <li>- Illustrator</li>
+          <div class="graph"></div>
+          <li>- HTML5 & CSS3</li>
+          <div class="graph"></div>
+          <li>- JavaScript & jQuery</li>
+          <div class="graph"></div>
+        </ul>
+      </div>
+    </div> <!-- end container -->
+  </section>
+
+  <section id="publishing">
+    <div class="container">
+      <h2>PORTFOLIO</h2>
+      <h3>Publishing</h3>
+      <div class="swiper-container">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="imac">
+               <img src="./images/아이맥 루나 2.png" alt="mockup_img">
+            </div>
+            <div class="info">
+                <img src="./images/luna.png" alt="logo">
+                <h5>온라인 악세사리 쇼핑몰</h5>
+                <span class="info_line"></span>
+                <p>가상의 악세사리 쇼핑몰을 브랜딩하여 로고, 배너, 아이콘등을 직접 제작하고 메인페이지를 구현하였습니다.</p>
+                <h5 class="h5_2">Contributoion</h5>
+                <span class="info_line"></span>
+                <p>개인프로젝트</p>
+                <a href="#">홈페이지 보러가기</a>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="imac">
+               <img src="./images/아이맥 캔들.png" alt="mockup_img">
+            </div>
+            <div class="info">
+                <img src="./images/yankee.png" alt="logo">
+                <h5>양키캔들 홈페이지 리뉴얼</h5>
+                <span class="info_line"></span>
+                <p>기존의 양키캔들 홈페이지를 반응형 웹페이지로 리뉴얼 하였습니다. </p>
+                <h5 class="h5_2">Contributoion</h5>
+                <span class="info_line"></span>
+                <p>개인프로젝트</p>
+                <a href="#">홈페이지 보러가기</a>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="imac">
+               <img src="./images/아이맥 카페베네.png" alt="mockup_img">
+            </div>
+            <div class="info">
+                <img src="./images/cafe.png" alt="logo">
+                <h5>카페베네 홈페이지 리뉴얼</h5>
+                <span class="info_line"></span>
+                <p>기존의 카페베네 홈페이지를 모던 & 심플한 스타일의 웹페이지로 리뉴얼 하였습니다.</p>
+                <h5 class="h5_2">Contributoion</h5>
+                <span class="info_line"></span>
+                <p>팀프로젝트</p>
+                <a href="#">홈페이지 보러가기</a>
+            </div>
+          </div>
+          
+        </div>
+      
+        <!-- 네비게이션 버튼 -->
+        <div class="swiper-button-next"></div><!-- 다음 버튼 (오른쪽에 있는 버튼) -->
+        <div class="swiper-button-prev"></div><!-- 이전 버튼 -->
+      
+        <!-- 페이징 -->
+        <div class="swiper-pagination"></div>
+      </div>
+      
+      <script>
+      
+      new Swiper( '.swiper-container', {
+      
+        effect : 'fade', // 페이드 효과 사용
+      
+        loop : true, // 무한 반복
+        pagination : { // 페이징 설정
+          el : '.swiper-pagination',
+          clickable : true, // 페이징을 클릭하면 해당 영역으로 이동, 필요시 지정해 줘야 기능 작동
+        },
+        navigation : { // 네비게이션 설정
+          nextEl : '.swiper-button-next', // 다음 버튼 클래스명
+          prevEl : '.swiper-button-prev', // 이번 버튼 클래스명
+        },
+      });
+      
+      </script>
+    </div> <!-- end container -->
+  </section>
+
+  <section id="s2">
+    <div class="container">
+      <h2>PORTFOLIO</h2>
+      <h3>design</h3>
+      <ul>
+        <li>
+          <a href="./images/icon.png" data-fancybox="gallery">
+            <figure class="snip1384">
+              <img src="./images/icon.png" alt="icon" />
+              <figcaption>
+                <h3>Icon</h3>
+                <p>Which is worse, that everyone has his price, or that the price is always so low.</p><i class="ion-ios-arrow-right"></i>
+              </figcaption>
+            </figure>
+          </a>
+        </li>
+        <li>
+          <a href="./images/icon2.png" data-fancybox="gallery">
+            <figure class="snip1384">
+              <img src="./images/icon2.png" alt="icon2" />
+              <figcaption>
+                <h3>Icon2</h3>
+                <p>Which is worse, that everyone has his price, or that the price is always so low.</p><i class="ion-ios-arrow-right"></i>
+              </figcaption>
+            </figure>
+          </a>
+        </li>
+        <li>
+          <a href="./images/invi.jpg" data-fancybox="gallery">
+            <figure class="snip1384">
+              <img src="./images/invi.png" alt="typo1" />
+              <figcaption>
+                <h3>Typography</h3>
+                <p>Which is worse, that everyone has his price, or that the price is always so low.</p><i class="ion-ios-arrow-right"></i>
+              </figcaption>
+            </figure>
+          </a>
+        </li>
+        <li>
+          <a href="./images/typo2.png" data-fancybox="gallery">
+            <figure class="snip1384">
+              <img src="./images/typo2.png" alt="sample83" />
+              <figcaption>
+                <h3>Typography2</h3>
+                <p>Which is worse, that everyone has his price, or that the price is always so low.</p><i class="ion-ios-arrow-right"></i>
+              </figcaption>
+            </figure>
+          </a>
+        </li>
+        <li>
+          <a href="./images/typo1.png" data-fancybox="gallery">
+            <figure class="snip1384">
+              <img src="./images/typo1.png" alt="gangseo" />
+              <figcaption>
+                <h3>Mobile Invitation</h3>
+                <p>Which is worse, that everyone has his price, or that the price is always so low.</p><i class="ion-ios-arrow-right"></i>
+              </figcaption>
+            </figure>
+          </a>
+        </li>
+        <li>
+          <a href="./images/mobile.png" data-fancybox="gallery">
+            <figure class="snip1384">
+              <img src="./images/mobile.png" alt="sample83" />
+              <figcaption>
+                <h3>UI/UX</h3>
+                <p>Which is worse, that everyone has his price, or that the price is always so low.</p><i class="ion-ios-arrow-right"></i>
+              </figcaption>
+            </figure>
+          </a>
+        </li>
+      </ul>
+    </div> <!-- end container -->
+  </section>
+
+
+  <!-- 애니메이션 -->
+  <script>
+    $(function () {
+      $('[data-youtube]').youtube_background();
+    })
+    // 콘텐츠 애니메이션 설정
+    enterView({
+      selector: '.header_group',  // 화면에 진입했을때 애니메이션이 될 요소명
+      offset: 0.5,          // 시작 지연시간(ms)
+      enter: function (el) {
+        el.classList.add('fade-slide-right');  // 애니메이션 클래스 명(CSS)
+      },
+    });
+    enterView({
+      selector: '#s2 ul', 
+      offset: 0.5, 
+      enter: function (el) {
+        el.classList.add('fade-slide-down'); 
+      },
+    }); 
+  </script>
+
+  <section id="contact">
+    <div class="container">
+      <h2>contact Me</h2>
+    </div> <!-- end container -->
+    <div id="up"><a href="#main_banner"><i class="fas fa-chevron-up"></i></a></div>
+  </section>
+</body>
+</html>
