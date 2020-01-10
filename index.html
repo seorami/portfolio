@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>SEO RA MI | PORTFOLIO</title>
+  <title>SEO RAMI</title>
   <!-- 구글웹폰트 -->
   <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap" rel="stylesheet">
   <!-- 폰트어썸: 아이콘 라이브러리 -->
@@ -12,11 +12,13 @@
   <!-- 진입 애니메이션 -->
   <script src="https://unpkg.com/enter-view"></script>
   <!-- 애니메이션 키프레임 -->
-  <link rel="stylesheet" href="ani.css">
+  <!-- <link rel="stylesheet" href="ani.css"> -->
   <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+  <!-- 라이트박스 -->
+  <link href="./css/lightbox.min.css" rel="stylesheet" />
   <!-- 갤러리 팬시박스 -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
-  <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+  <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+  <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script> -->
   <!-- 스와이퍼 -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/css/swiper.min.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/js/swiper.min.js"></script>
@@ -86,6 +88,7 @@
       autoplay
       muted
       src="./images/cheese.mp4"></video>
+      
     </div> <!-- end container -->
   </section>
 
@@ -132,17 +135,33 @@
         <span class="ab_line"></span>
         <ul>
           <li>- Photoshop</li>
-          <div class="graph"></div>
           <li>- Illustrator</li>
-          <div class="graph"></div>
           <li>- HTML5 & CSS3</li>
-          <div class="graph"></div>
           <li>- JavaScript & jQuery</li>
-          <div class="graph"></div>
         </ul>
+        <div class="graph-right">
+          <div class="graph"></div>
+          <div class="graph"></div>
+          <div class="graph"></div>
+          <div class="graph"></div>
+        </div>
       </div>
     </div> <!-- end container -->
   </section>
+  <!-- 그래프 -->
+  <script>
+  $(window).scroll(function() {
+    var scroll = $(window).scrollTop();
+    // console.log(scroll);
+    if (scroll >= 800) {
+      //console.log('a');
+      $(".graph").attr("class", "fill");
+    } else {
+      //console.log('a');
+      $(".graph").removeClass("fill");
+    }
+});
+  </script>
 
   <section id="publishing">
     <div class="container">
@@ -233,7 +252,7 @@
       <h3>design</h3>
       <ul>
         <li>
-          <a href="./images/icon.png" data-fancybox="gallery">
+          <a href="./images/icon-b.jpg" data-lightbox="image-1">
             <figure class="snip1384">
               <img src="./images/icon.png" alt="icon" />
               <figcaption>
@@ -242,9 +261,10 @@
               </figcaption>
             </figure>
           </a>
+          <a href="./images/icon-w.jpg" data-lightbox="image-1"></a>
         </li>
         <li>
-          <a href="./images/icon2.png" data-fancybox="gallery">
+          <a href="./images/icon3.jpg" data-lightbox="image-2">
             <figure class="snip1384">
               <img src="./images/icon2.png" alt="icon2" />
               <figcaption>
@@ -255,7 +275,7 @@
           </a>
         </li>
         <li>
-          <a href="./images/invi.jpg" data-fancybox="gallery">
+          <a href="./images/invi.jpg" data-lightbox="image-3">
             <figure class="snip1384">
               <img src="./images/invi.png" alt="typo1" />
               <figcaption>
@@ -266,7 +286,7 @@
           </a>
         </li>
         <li>
-          <a href="./images/typo2.png" data-fancybox="gallery">
+          <a href="./images/typo2.png" data-lightbox="image-4">
             <figure class="snip1384">
               <img src="./images/typo2.png" alt="sample83" />
               <figcaption>
@@ -277,7 +297,7 @@
           </a>
         </li>
         <li>
-          <a href="./images/typo1.png" data-fancybox="gallery">
+          <a href="./images/typo1.png" data-lightbox="image-5">
             <figure class="snip1384">
               <img src="./images/typo1.png" alt="gangseo" />
               <figcaption>
@@ -288,7 +308,7 @@
           </a>
         </li>
         <li>
-          <a href="./images/mobile.png" data-fancybox="gallery">
+          <a href="./images/mobile.png" data-lightbox="image-6">
             <figure class="snip1384">
               <img src="./images/mobile.png" alt="sample83" />
               <figcaption>
@@ -301,21 +321,19 @@
       </ul>
     </div> <!-- end container -->
   </section>
-
-
   <!-- 애니메이션 -->
   <script>
     $(function () {
       // $('[data-youtube]').youtube_background();
     })
     // 콘텐츠 애니메이션 설정
-    enterView({
-      selector: '.header_group',  // 화면에 진입했을때 애니메이션이 될 요소명
-      offset: 0.5,          // 시작 지연시간(ms)
-      enter: function (el) {
-        el.classList.add('fade-slide-right');  // 애니메이션 클래스 명(CSS)
-      },
-    });
+    // enterView({
+    //   selector: '.header_group',  // 화면에 진입했을때 애니메이션이 될 요소명
+    //   offset: 0.5,          // 시작 지연시간(ms)
+    //   enter: function (el) {
+    //     el.classList.add('fade-slide-right');  // 애니메이션 클래스 명(CSS)
+    //   },
+    // });
     enterView({
       selector: '#s2 ul', 
       offset: 0.5, 
@@ -328,8 +346,15 @@
   <section id="contact">
     <div class="container">
       <h2>contact Me</h2>
+      <ul>
+        <li><img src="./images/phone.png" alt="">010-5407-7134</li>
+        <li><img src="./images/mail.png" alt="">gpwrrm@naver.com</li>
+      </ul>
     </div> <!-- end container -->
     <div id="up"><a href="#main_banner"><i class="fas fa-chevron-up"></i></a></div>
   </section>
+
+  <!-- LIGHTBOX 스크립트 -->
+  <script src="./js/lightbox.min.js"></script>
 </body>
 </html>
