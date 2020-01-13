@@ -36,10 +36,10 @@ html, body {
 #main_header h1 {
   position: absolute;
   top: 10px;
-  color: #fdd65b;
+  color: #FDD65B;
 }
 #main_header h1 a {
-  color: #fdd65b;
+  color: #FDD65B;
 }
 #main_gnb > ul {
   position: absolute;
@@ -55,7 +55,7 @@ html, body {
   font-size: 16px;
 }
 #main_gnb > ul > li > a:hover {
-  color: #fdd65b;
+  color: #FDD65B;
 }
 .down {
   background-color:rgba(0,0,0,0.8);
@@ -281,7 +281,7 @@ span.center{
   width:40px; height:40px;
   border-radius: 50%;
   text-align:center; line-height: 40px;
-  font-size: 12px;
+  font-size: 11px;
   transform: translate(-50%, -50%);
 }
 
@@ -511,8 +511,6 @@ float: left;
   margin: 0 auto;
   margin-top: 12px;
 }
-#contact ul {
-}
 #contact li {
   margin-bottom: 20px;
 }
@@ -541,21 +539,28 @@ float: left;
   font-size: 24px;
 }
 /* top button */
-#contact a {
+.up {
   position: absolute;
-  right: 100px; bottom: 100px;
+  right: 150px; bottom: 50px;
+}
+.up a {
+  display: block;
   border: 5px solid #FDD65B;
   background: #fff;
-  width: 100px; height: 100px;
-  box-sizing: border-box;
 }
-#contact i:hover {
-  background: #FDD65B;
-  color: #fff;
+.up a:hover {
+  background: #fdd65b;
   transition: 0.2s;
 }
-#contact i {
-  padding: 20px 25px;
+.up a:hover > .up i {
+  color: white;
+}
+.up i {
   font-size: 50px;
-  color: #FDD65B;
+  color: #fdd65b;
+  /* outline: 1px solid red; */
+  padding: 30px;
+}
+.up i:hover {
+  color: #fff;
 }

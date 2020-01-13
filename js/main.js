@@ -23,7 +23,7 @@ $(function () {
 //scroll
     $(function () {
       // 페이지 스크롤 효과
-      $('#main_gnb a, #up a').on('click', function () {
+      $('#main_gnb a, .up a').on('click', function () {
         // 이동한 내부 링크의 위치값(hash)
         var target = $(this.hash);
         console.log(target);
