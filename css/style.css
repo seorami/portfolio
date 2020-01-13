@@ -541,7 +541,7 @@ float: left;
 /* top button */
 .up {
   position: absolute;
-  right: 150px; bottom: 50px;
+  right: 100px; bottom: 50px;
 }
 .up a {
   display: block;
@@ -556,10 +556,10 @@ float: left;
   color: white;
 }
 .up i {
-  font-size: 50px;
+  font-size: 40px;
   color: #fdd65b;
   /* outline: 1px solid red; */
-  padding: 30px;
+  padding: 10px;
 }
 .up i:hover {
   color: #fff;
