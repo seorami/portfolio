@@ -66,23 +66,22 @@ html, body {
 }
 /* 메인비주얼 */
 #main_banner {
+  /* position: relative; */
   /* background-image: url("../images/"); */
   /* background-size: cover;
   background-repeat: no-repeat;
   background-position: center; */
   height: 100%;
-  background: rgb(87, 25, 183);
+  background: #5719b7
 }
 #cheese {
-  min-height: 100%;
-  min-width: 100%;
-  margin-top: 25%;
-  transform: scale(1.2);
+  min-width: 1200px;
+  width: 100%;
+  height: 100%;
+  transform: scale(0.8);
 }
 /* about */
 #about {
-  position: relative;
-  width: 100%;
   height: 670px;
   background: #F0F2FF;
 }
@@ -101,15 +100,18 @@ h3 {
   color: #FDD65B;
 }
 h4 {
-  font-size: 20px;
+  font-size: 18px;
   font-weight: bold;
 }
 h5 {
-  font-size: 16px;
+  font-size: 22px;
   font-weight: bold;
 }
+#about h2 {
+  margin-bottom: 80px;
+}
 #about ul li {
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 200;
   padding-bottom: 3px;
 }
@@ -119,59 +121,35 @@ h5 {
   margin-top: 12px;
   margin-bottom: 12px;
 }
-/* about-profile */
-#about .profile {
-  position: absolute;
-  top: 0; left: 0;
-  width: 300px;
-  height: 670px;
-  /* background: #ccc; */
-}
-#about .profile > h4 {
-  display: inline-block;
-}
-#about .profile > h5 {
-  display: inline-block;
-  margin-left: 10px;
-}
-#about .profile img {
-  margin-top: 120px;
-  margin-bottom: 40px;
-}
 /* about-career */
 #about .career {
-  position: absolute;
-  top: 170px;
-  left: 460px;
-  width: 300px;
-  height: 170px;
+  float: left;
+  width: 420px;
+  height: 200px;
   /* background: #ccc; */
 }
 /* about-license */
 #about .license {
-  position: absolute;
-  top: 170px;
-  right: 0;
-  width: 300px;
-  height: 170px;
+  float: right;
+  width: 420px;
+  height: 200px;
   /* background: #ccc; */
 }
 /* about-education */
 #about .education {
-  position: absolute;
-  top: 382px;
-  left: 460px;
-  width: 300px;
-  height: 170px;
+  clear: both;
+  float: left;
+  margin-top: 30px;
+  width: 420px;
+  height: 200px;
   /* background: #ccc; */
 }
 /* about-skill */
 #about .skill {
-  position: absolute;
-  top: 382px;
-  right: 0;
-  width: 300px;
-  height: 170px;
+  float: right;
+  margin-top: 30px;
+  width: 420px;
+  height: 200px;
   /* background: #ccc; */
 }
 /* skill graph */
@@ -184,7 +162,8 @@ h5 {
 }
 #about .graph-right {
   float: right;
-  width: 150px;
+  width: 240px;
+  /* outline: 1px solid red; */
 }
 #about .graph {
   /* float: right; */
@@ -192,10 +171,10 @@ h5 {
   width: 10px;
   border-radius: 10px 10px 10px 10px;
   background: #FDD65B;
-  margin-top: 13px;
+  margin-top: 18px;
 }
 #about .graph:nth-child(1) {
-  margin-top: 8px;
+  margin-top: 7px;
 }
 .fill {
   /* float: right; */
@@ -203,22 +182,22 @@ h5 {
   width: 10px;
   border-radius: 10px 10px 10px 10px;
   background: #FDD65B;
-  margin-top: 13px;
+  margin-top: 18px;
   transition: ease-in;
 }
 .fill:nth-child(1) {
   margin-top: 8px;
-  width: 120px;
+  width: 180px;
   transition: 2.2s;
 }
 .fill:nth-child(2) {
   /* margin-top: 7px; */
-  width: 100px;
+  width: 130px;
   transition: 2.2s;
 }
 .fill:nth-child(3) {
   /* margin-top: 7px; */
-  width: 80px;
+  width: 100px;
   transition: 2.2s;
 }
 .fill:nth-child(4) {
@@ -228,6 +207,7 @@ h5 {
 }
 /* swiper */
 .swiper-container {
+  position: relative;
   clear: both;
   width:1200px;
   height:670px;
@@ -237,49 +217,30 @@ h5 {
 }
 .swiper-slide {
   /* text-align:center; */
-  display:flex; /* 내용을 중앙정렬 하기위해 flex 사용 */
-  align-items:center; /* 위아래 기준 중앙정렬 */
-  justify-content:center; /* 좌우 기준 중앙정렬 */
+  display: flex; /* 내용을 중앙정렬 하기위해 flex 사용 */
+  align-items: center; /* 위아래 기준 중앙정렬 */
+  justify-content: center; /* 좌우 기준 중앙정렬 */
 }
 /* publishing */
 #publishing {
   background: #fff;
-  width: 100%;
   height: 800px;
 }
 /* portfolio */
-#publishing .container {
-  position: relative;
-}
-#publishing {
-  /* overflow: hidden; */
-}
-
-#publishing .swiper-slide {
-  /* position: absolute; */
-  /* left: 0; top: 100px; */
-  margin: 0 auto;
-}
 #publishing .imac > img {
   position: absolute;
-  top: 60px;
-  left: 100px;
+  left: 120px; top: 60px;
+  /* float: left; */
   display: block;
-  max-width: 100%;
-  
+  /* outline: 1px solid red; */
 }
 #publishing .info {
   position: absolute;
-  top: 80px;
-  right: 200px;
-  width: 180px;
-  height: 400px;
+  top: 85px; right: 140px;
+  /* float: right; */
+  width: 200px;
+  height: 500px;
   background: #fff;
-}
-#publishing .info img {
-  display: block;
-  clear: both;
-  margin: 0 auto;
 }
 #publishing .info_line {
   display: block;
@@ -288,15 +249,43 @@ h5 {
   margin-bottom: 5px;
 }
 #publishing .info h5 {
+  font-size: 18px;
   margin-top: 20px;
 }
 #publishing .info .h5_2 {
   margin-top: 60px;
 }
 #publishing .info p {
-  font-size: 12px;
+  font-size: 14px;
   height: 60px;
 }
+#publishing .info .p-2 {
+  height: 35px;
+  /* outline: 1px solid red; */
+}
+/* 원형그래프 */
+.pie-chart {
+  position: relative;
+  display:inline-block;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  transition: 0.3s;
+  margin-left: 10px;
+}
+span.center{
+  background: #fff;
+  display : block;
+  position: absolute;
+  top:50%; left:50%;
+  width:40px; height:40px;
+  border-radius: 50%;
+  text-align:center; line-height: 40px;
+  font-size: 12px;
+  transform: translate(-50%, -50%);
+}
+
+/* info 버튼 */
 #publishing .info a {
   display: block;
   text-align: center;
@@ -309,12 +298,13 @@ h5 {
   font-weight: bold;
   margin: 0 auto;
   transition: 0.2s;
-  margin-top: 20px;
+  margin-top: 40px;
 }
 #publishing .info a:hover {
   background-color: #363636;
   color: #fff;
 }
+
 /* design */
 #s2 {
   background: #F0F2FF;
@@ -327,6 +317,8 @@ h5 {
   /* width: 70%; */
   /* border: 2px solid blue; */
   overflow: hidden;
+  margin-top: 20px;
+  
 }
 #s2 li{
   /* width: 33.33%; */
@@ -447,13 +439,14 @@ opacity: 0;
 }
 figure.snip1384 p {
 font-size: 0.8em;
-font-weight: 300;
+/* font-weight: 300; */
 letter-spacing: 1px;
 opacity: 0;
 top: 50%;
 margin-top: 20px;
 -webkit-transform: translateY(40px);
 transform: translateY(40px);
+font-family: 'Noto Sans KR', sans-serif;
 }
 figure.snip1384 i {
 position: absolute;
@@ -508,8 +501,15 @@ float: left;
   clear: both;
   position: relative;
   background: #fff;
-  /* width: 100%; */
-  height: 500px;
+  height: 580px;
+}
+.contact-line {
+  display: block;
+  text-align: center;
+  width: 40px;
+  border: 2px solid #FDD65B;
+  margin: 0 auto;
+  margin-top: 12px;
 }
 #contact ul {
 }
@@ -520,7 +520,27 @@ float: left;
   padding-right: 10px;
   /* padding-bottom: 10px; */
   transform: translateY(8px);
+}#contact ul {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
 }
+#contact ul li {
+  margin-bottom: 14px;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  /* display: inline; */
+  /* margin-right: 20px; */
+}
+#contact ul li:first-child {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+#contact ul li:nth-child(2) {
+  font-size: 24px;
+}
+/* top button */
 #contact a {
   position: absolute;
   right: 100px; bottom: 100px;
