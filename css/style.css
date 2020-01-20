@@ -186,7 +186,7 @@ h5 {
   transition: ease-in;
 }
 .fill:nth-child(1) {
-  margin-top: 8px;
+  margin-top: 7px;
   width: 180px;
   transition: 2.2s;
 }
@@ -545,7 +545,7 @@ float: left;
 }
 .up a {
   display: block;
-  border: 5px solid #FDD65B;
+  border: 4px solid #FDD65B;
   background: #fff;
 }
 .up a:hover {
